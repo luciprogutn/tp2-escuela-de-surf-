@@ -41,5 +41,7 @@ public class Alumno{
         this.nivel = nivel;
     }
 
-
+    public String descripcion() {
+        return "Alumno: " + nombre + " " + apellido + " "+ dni + " " + nivel + " ";
+    }
 }

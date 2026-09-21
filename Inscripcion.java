@@ -1,4 +1,4 @@
-public class inscripcion{
+public class Inscripcion{
     private String fechaInscripcion;
     private Boolean asistio;
 
@@ -6,7 +6,7 @@ public class inscripcion{
     private Turno turno;
     private Tabla tabla;
 
-    private inscripcion(String fechaInscripcion, Alumno alumno, Turno turno, Tabla tabla ){
+    private Inscripcion(String fechaInscripcion, Alumno alumno, Turno turno, Tabla tabla ){
         this.fechaInscripcion = fechaInscripcion;
         this.alumno = alumno;
         this.turno = turno;

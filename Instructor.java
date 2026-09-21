@@ -38,6 +38,6 @@ public class Instructor{
     }
 
     public String descripcion(){
-        return "Instructor: " + nombre + " " + apellido + " (Matrícula: " + matricula + ")";
+        return "Instructor: " + nombre + " " + apellido + " (Matrícula: " + matricula + " ";
     }
 }
