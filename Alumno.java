@@ -29,7 +29,17 @@ public class Alumno{
     public String getDni() {
         return dni;
     }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
 
 
 }
