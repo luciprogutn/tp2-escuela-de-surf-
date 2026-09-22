@@ -10,7 +10,7 @@ public class Tabla {
         this.enReparacion = enReparacion;
 
     }
-    public Tabla(String codigo, double largoPies) {
+    public Tabla(int codigo, double largoPies) {
         this(codigo, largoPies, false);
     }
     public boolean disponible() {
@@ -30,6 +30,10 @@ public class Tabla {
     }
     public void setEnReparacion(boolean enReparacion) {
         this.enReparacion = enReparacion;
+    }
+
+    public String descripcion() {
+        return "Tabla Código: " + codigo + " - Largo: " + largoPies + " pies";
     }
 
 }

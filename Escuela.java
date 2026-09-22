@@ -2,7 +2,7 @@ public class Escuela {
     private String nombre;
     private String playa;
 
-    public Escuela(String nombre, string playa){
+    public Escuela(String nombre, String playa){
     this.nombre = nombre;
     this.playa = playa;
     }

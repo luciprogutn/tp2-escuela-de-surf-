@@ -42,4 +42,8 @@ public class Alumno{
     }
 
 
+    public String descripcion() {
+        return "Alumno: " + nombre + " " + apellido + " - DNI: " + dni;
+    }
+
 }
