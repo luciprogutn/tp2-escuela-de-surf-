@@ -1,10 +1,15 @@
 public class Escuela {
+
     private String nombre;
     private String playa;
 
     public Escuela(String nombre, String playa){
     this.nombre = nombre;
     this.playa = playa;
+    }
+
+    public Escuela(String nombre) {
+        this(nombre, "Playa Central"); // Playa por defecto
     }
 
     public String getNombre() {
@@ -22,7 +27,6 @@ public class Escuela {
     this.playa = playa;
     }
 
-    // este es le punto 7 que dice que tenemos que retornar una descripcion.
     public String descripcion() {
     return "Escuela: " + nombre + " (Playa: " + playa + ")";
     }

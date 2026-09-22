@@ -10,6 +10,9 @@ public class Instructor{
         this.matricula = matricula;
 
     }
+    public Instructor(String nombre, String apellido) {
+        this(nombre, apellido, 0); // Asigna 0 por defecto si aún no tiene matrícula
+    }
 
     public String getNombre() {
         return nombre;

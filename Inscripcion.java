@@ -1,6 +1,6 @@
 public class Inscripcion{
     private String fechaInscripcion;
-    private Boolean asistio;
+    private boolean asistio;
 
     private Alumno alumno;
     private Turno turno;
@@ -11,7 +11,7 @@ public class Inscripcion{
         this.alumno = alumno;
         this.turno = turno;
         this.tabla = tabla;
-        this.asistio = false;
+        this.asistio = asistio;
     }
 
     public String getFechaInscripcion() {
@@ -22,7 +22,7 @@ public class Inscripcion{
         this.fechaInscripcion = fechaInscripcion;
     }
 
-    public Boolean getAsistio() {
+    public Boolean isAsistio() {
         return asistio;
     }
 
@@ -58,9 +58,14 @@ public class Inscripcion{
         this.asistio = asistio;
     }
 
-    // Método descripcion() obligatorio (Parte C.7)
+
     public String descripcion() {
-        String estadoAsistencia = (asistio != null && asistio) ? "Presente" : "Ausente / Pendiente";
+        String estadoAsistencia;
+        if (asistio) {
+            estadoAsistencia = "Presente";
+        } else {
+            estadoAsistencia = "Ausente / Pendiente";
+        }
         return "Inscripción de " + alumno.getNombre() + " " + alumno.getApellido() +
                 " - Fecha: " + fechaInscripcion +
                 " - Asistencia: " + estadoAsistencia;
