@@ -11,12 +11,12 @@ public class Tabla {
 
     }
 
-    public void LargoPies(double largoPies) {
+    public void setLargoPies(double largoPies) {
         if (largoPies >= 5 && largoPies <= 10) {
             this.largoPies = largoPies;
         } else System.out.println("la Tabla no esta dentro del rango");
-
     }
+
 
     public Tabla(int codigo, double largoPies) {
         this(codigo, largoPies, false);
@@ -30,7 +30,7 @@ public class Tabla {
         return codigo;
     }
 
-    public boolean enReparacion() {
+    public boolean isEnReparacion() {
         return enReparacion;
     }
 
@@ -50,6 +50,13 @@ public class Tabla {
     }
 
     public String descripcion() {
-        return "Tabla: [codigo:" + codigo + " | largo: " + largoPies + " pies | Estado:" + enReparacion + "]";
+        String estado;
+        if (enReparacion) {
+            estado = " en reparacion ";
+        } else {
+            estado = "disponible";
+        }
+            return "Tabla: [codigo:" + codigo + " | largo: " + largoPies + " pies | Estado:" + enReparacion + "]";
+
     }
 }
