@@ -7,15 +7,20 @@ public class Alumno{
     static int ultimoNumero = 0;
 
 
-    public Alumno(String nombre, String apellido, String dni){
+    public Alumno(String nombre, String apellido, String dni, String nivel){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.numeroAlumno = numeroAlumno;
 
+        ultimoNumero++;
         this.numeroAlumno=ultimoNumero;
-            ultimoNumero++;
 
+
+    }
+
+    public int getNumeroAlumno() {
+        return numeroAlumno;
     }
 
     public String getNombre() {
@@ -41,9 +46,5 @@ public class Alumno{
         this.nivel = nivel;
     }
 
-
-    public String descripcion() {
-        return "Alumno: " + nombre + " " + apellido + " - DNI: " + dni;
-    }
 
 }

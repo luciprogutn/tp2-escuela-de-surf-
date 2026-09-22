@@ -32,8 +32,4 @@ public class Tabla {
         this.enReparacion = enReparacion;
     }
 
-    public String descripcion() {
-        return "Tabla Código: " + codigo + " - Largo: " + largoPies + " pies";
-    }
-
 }
