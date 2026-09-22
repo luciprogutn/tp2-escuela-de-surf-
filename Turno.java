@@ -1,36 +1,41 @@
 public class Turno {
-    static final int CUPO_MAXIMO = 10;
+    private int cupoMaximo;
     private String fecha;
     private String horario;
     private Instructor instructor;
+    private int cantidadInscriptos;
 
-
-    public Turno(String fecha, String horario, Instructor instructor) {
+    public Turno(int cupoMaximo, String fecha, String horario, Instructor instructor) {
+        this.cupoMaximo = cupoMaximo;
         this.fecha = fecha;
         this.horario = horario;
         this.instructor = instructor;
-
-    }
-
-    public String getFecha() {
-
-        return fecha;
-    }
-
-    public String getHorario() {
-        return horario;
-    }
-
-    public Instructor getInstructor() {
-
-        return instructor;
+        this.cantidadInscriptos = 0;
     }
 
     public int getCupoMaximo() {
-        return CUPO_MAXIMO;
+        return cupoMaximo;
+    }
+
+    public int getCantidadInscriptos() {
+        return cantidadInscriptos;
+    }
+
+    public boolean hayCupo() {
+        return cantidadInscriptos < cupoMaximo;
+    }
+
+    public void sumarInscripto() {
+        if (hayCupo()) {
+            cantidadInscriptos++;
+        }
+    }
+
+    public Instructor getInstructor() {
+        return instructor;
     }
 
     public String descripcion() {
-        return "Turno: " + fecha + " " + horario + " (Instructor: " + instructor.getNombre() + " " + instructor.getApellido() + ")";
+        return "Turno (" + horario + " - " + fecha + ")";
     }
 }
