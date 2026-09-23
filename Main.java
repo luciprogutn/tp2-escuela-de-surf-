@@ -72,15 +72,15 @@ public class Main {
         int totalInscriptosTurno1 = 2;
         int presentesTurno1 = 0;
 
-        if (Boolean.TRUE.equals(inscripcion1.getAsistio())) presentesTurno1++;
-        if (Boolean.TRUE.equals(inscripcion2.getAsistio())) presentesTurno1++;
+        if (inscripcion1.isAsistio()){ presentesTurno1++;}
+        if (inscripcion2.isAsistio()) {presentesTurno1++;}
 
         double porcentajeAsistencia = ((double) presentesTurno1 / totalInscriptosTurno1) * 100.0;
         System.out.printf("Porcentaje de asistencia (Turno 1 - 09:00 AM): %.2f%%\n", porcentajeAsistencia);
 
 
         // -------------------------------------------------------------
-        // D.5: VERIFICACIÓN DE NUMERACIÓN AUTONUMÉRICA (Alumno)
+        // D.5: VERIFICACIÓN DE NUMERACIÓN INCREMENTAL (Alumno)
         // -------------------------------------------------------------
         System.out.println("\n==============================================");
         System.out.println("        NÚMEROS CORRELATIVOS DE ALUMNOS       ");
