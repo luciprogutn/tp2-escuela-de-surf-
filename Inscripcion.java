@@ -6,7 +6,7 @@ public class Inscripcion{
     private Turno turno;
     private Tabla tabla;
 
-    private Inscripcion(String fechaInscripcion, Alumno alumno, Turno turno, Tabla tabla ){
+    public Inscripcion(String fechaInscripcion, Alumno alumno, Turno turno, Tabla tabla ){
         this.fechaInscripcion = fechaInscripcion;
         this.alumno = alumno;
         this.turno = turno;

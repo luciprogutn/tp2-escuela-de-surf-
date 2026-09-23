@@ -7,10 +7,11 @@ public class Alumno {
     private String nivel;
 
 
-    public Alumno(String nombre, String apellido, String dni) {
+    public Alumno(String nombre, String apellido, String dni, String nivel) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.nivel = nivel;
         ultimoNumero++;
 
         this.numeroAlumno = ultimoNumero;
@@ -49,7 +50,8 @@ public class Alumno {
     public void setNivel(String nivel) {
         if (nivel == "principiante" || nivel == "intermedio") {
             this.nivel = nivel;
-        } else {
+        }
+        else {
             System.out.println("error: el nivel debe ser principiante o intermedio");
             this.nivel = "principiante";
         }
