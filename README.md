@@ -20,6 +20,7 @@ de los metodos en inscripcion, escuela y alumno para solucionar fallos de compil
 ¿como compilamos?
 javac Main.java 
 java Main.java
+prueba de compilacion: *.java
 
 
 ## Preguntas
