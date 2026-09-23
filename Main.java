@@ -16,11 +16,11 @@ public class Main {
 
         // Alumno: (String nombre, String apellido, String dni)
         // Instanciación pasando: nombre, apellido, dni y nivel
-        Alumno alumno1 = new Alumno("Yoi", "Pérez", "40123456", "Principiante");
-        Alumno alumno2 = new Alumno("Lucas", "Rodríguez", "41234567", "Intermedio");
-        Alumno alumno3 = new Alumno("Sofia", "Martínez", "42345678", "Avanzado");
-        Alumno alumno4 = new Alumno("Mateo", "García", "43456789", "Principiante");
-        Alumno alumno5 = new Alumno("Valentina", "Díaz", "44567890", "Intermedio");
+        Alumno alumno1 = new Alumno("Yoi", "Pérez", "40123456", "principiante");
+        Alumno alumno2 = new Alumno("Lucas", "Rodríguez", "41234567", "intermedio");
+        Alumno alumno3 = new Alumno("Sofia", "Martínez", "42345678", "principiante");
+        Alumno alumno4 = new Alumno("Mateo", "García", "43456789", "principiante");
+        Alumno alumno5 = new Alumno("Valentina", "Díaz", "44567890", "intermedio");
 
 
               // Turno: (int cupoMaximo, String fecha, String horario, Instructor instructor)
@@ -61,10 +61,10 @@ public class Main {
         tabla3.setEnReparacion(true);
 
         int tablasEnReparacion = 0;
-        if (tabla1.enReparacion()) tablasEnReparacion++;
-        if (tabla2.enReparacion()) tablasEnReparacion++;
-        if (tabla3.enReparacion()) tablasEnReparacion++;
-        if (tabla4.enReparacion()) tablasEnReparacion++;
+        if (tabla1.isEnReparacion()) tablasEnReparacion++;
+        if (tabla2.isEnReparacion()) tablasEnReparacion++;
+        if (tabla3.isEnReparacion()) tablasEnReparacion++;
+        if (tabla4.isEnReparacion()) tablasEnReparacion++;
 
         System.out.println("Cantidad de tablas en reparación: " + tablasEnReparacion);
 
@@ -86,10 +86,10 @@ public class Main {
         System.out.println("        NÚMEROS CORRELATIVOS DE ALUMNOS       ");
         System.out.println("==============================================");
 
-        System.out.println("Alumno: " + alumno1.getNombre() + " " + alumno1.getApellido() + " -> Nº Alumno: " + alumno1.getNumeroAlumno());
-        System.out.println("Alumno: " + alumno2.getNombre() + " " + alumno2.getApellido() + " -> Nº Alumno: " + alumno2.getNumeroAlumno());
-        System.out.println("Alumno: " + alumno3.getNombre() + " " + alumno3.getApellido() + " -> Nº Alumno: " + alumno3.getNumeroAlumno());
-        System.out.println("Alumno: " + alumno4.getNombre() + " " + alumno4.getApellido() + " -> Nº Alumno: " + alumno4.getNumeroAlumno());
-        System.out.println("Alumno: " + alumno5.getNombre() + " " + alumno5.getApellido() + " -> Nº Alumno: " + alumno5.getNumeroAlumno());
+        System.out.println("Alumno: " + alumno1.getNombre() + " " + alumno1.getApellido() + " -> Nº Alumno: " + alumno1.getnumeroAlumno() + " " + "Nivel: " + alumno1.getNivel());
+        System.out.println("Alumno: " + alumno2.getNombre() + " " + alumno2.getApellido() + " -> Nº Alumno: " + alumno2.getnumeroAlumno() + " " + "Nivel: " + alumno2.getNivel());
+        System.out.println("Alumno: " + alumno3.getNombre() + " " + alumno3.getApellido() + " -> Nº Alumno: " + alumno3.getnumeroAlumno() + " " + "Nivel: " + alumno3.getNivel());
+        System.out.println("Alumno: " + alumno4.getNombre() + " " + alumno4.getApellido() + " -> Nº Alumno: " + alumno4.getnumeroAlumno() + " " + "Nivel: " + alumno4.getNivel());
+        System.out.println("Alumno: " + alumno5.getNombre() + " " + alumno5.getApellido() + " -> Nº Alumno: " + alumno5.getnumeroAlumno() + " " + "Nivel: " + alumno5.getNivel());
     }
 }
